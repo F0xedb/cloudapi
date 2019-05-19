@@ -77,3 +77,25 @@ to test the app use the following command
 ```
 dotnet run # run it in the app root
 ```
+
+
+
+## Frontend
+
+To run the frontend with a file watcher use
+
+```
+ng serve
+```
+
+
+
+### build and deploy
+
+To build your app and then deploy the generated files use the following
+
+```
+ng build
+mv dist/* <static webserver> # static webserver is the filepath where your static webserver is serving its content
+```
+
