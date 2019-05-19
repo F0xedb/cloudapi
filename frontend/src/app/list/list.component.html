@@ -1,0 +1,37 @@
+<br>
+<h2 class="ui center aligned icon header">
+  <i class="circular search icon"></i>
+  {{data.queries.request[0].title}}
+</h2>
+<h2 class="ui center aligned sub header">
+  Total results : {{data.queries.request[0].totalResults}} in {{data.searchInformation.formattedSearchTime}} seconds
+</h2>
+<div class="ui divider"></div>
+<br>
+<div class="ui cards four column doubling stackable grid container">
+  <div class="card" *ngFor="let item of data.items">
+    <div class="content">
+      <div class="header">
+        {{item.title}}
+      </div>
+      <div class="meta">
+        {{item.cacheId}}
+      </div>
+      <div class="description">
+        {{item.snippet}}
+      </div>
+    </div>
+    <div class="extra content">
+      <div class="ui two buttons">
+        <a class="medium ui button" href="{{item.link}}">
+          {{item.displayLink}}
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+<div class="ui one column stackable center aligned page grid">
+  <app-pagination [start]="startpage" [size]=5 (callback)="searcher($event)" [update]="callback"></app-pagination>
+</div>
+<br>
