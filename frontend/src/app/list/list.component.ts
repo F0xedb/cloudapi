@@ -10,7 +10,7 @@ import { PaginationComponent } from "../pagination/pagination.component";
   styleUrls: ["./list.component.scss"]
 })
 export class ListComponent implements OnInit {
-  data = {};
+  data = undefined;
   startpage = 0;
   query = "";
   callback = new EventEmitter<any>();
@@ -33,13 +33,16 @@ export class ListComponent implements OnInit {
     });
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.data = undefined;
+  }
 
   searcher(page) {
-    this.google.getSearchResultList(this.query, 8, 0).subscribe(data => {
+    console.log("Inside list component - searcher received: " + page);
+    this.google.getSearchResultList(this.query, 8, page).subscribe(data => {
       this.data = data;
-      this.startpage = 0;
-      this.callback.emit(0);
+      this.startpage = page;
+      this.callback.emit(page);
     });
 
     this.startpage = page;
