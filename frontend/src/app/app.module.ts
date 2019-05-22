@@ -9,9 +9,10 @@ import { FormsModule } from "@angular/forms";
 import { ListComponent } from "./list/list.component";
 import { HttpClientModule } from "@angular/common/http";
 import { PaginationComponent } from './pagination/pagination.component';
+import { LoadingComponent } from './loading/loading.component';
 
 @NgModule({
-  declarations: [AppComponent, MenuComponent, ListComponent, PaginationComponent],
+  declarations: [AppComponent, MenuComponent, ListComponent, PaginationComponent, LoadingComponent],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent]
