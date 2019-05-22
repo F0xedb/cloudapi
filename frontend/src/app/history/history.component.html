@@ -1,0 +1,24 @@
+<br>
+<div class="ui black card grid container">
+  <div class="content">
+    <h1 class="header">History</h1>
+    <div class="meta">
+      <span class="date">History List: {{list.length}}</span>
+    </div>
+  </div>
+  <div class="item" *ngFor="let history of list">
+    <div class="right floated content">
+      <div class="ui animated button" tabindex="0">
+        <div class="visible content">Search</div>
+        <div class="hidden content">
+          <i class="search icon"></i>
+        </div>
+      </div>
+    </div>
+    <div class="content header">
+      {{history.name}}
+    </div>
+    <br>
+    <div class="ui divider"></div>
+  </div>
+</div>

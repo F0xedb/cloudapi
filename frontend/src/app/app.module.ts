@@ -10,9 +10,11 @@ import { ListComponent } from "./list/list.component";
 import { HttpClientModule } from "@angular/common/http";
 import { PaginationComponent } from './pagination/pagination.component';
 import { LoadingComponent } from './loading/loading.component';
+import { HomeComponent } from './home/home.component';
+import { HistoryComponent } from './history/history.component';
 
 @NgModule({
-  declarations: [AppComponent, MenuComponent, ListComponent, PaginationComponent, LoadingComponent],
+  declarations: [AppComponent, MenuComponent, ListComponent, PaginationComponent, LoadingComponent, HomeComponent, HistoryComponent],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent]

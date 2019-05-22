@@ -1,7 +1,6 @@
 import { Component, OnInit, ViewChild, AfterViewInit } from "@angular/core";
 import { SearchCommunicatorService } from "../shared/search-communicator.service";
-import { combineLatest } from "rxjs";
-
+import { Router } from "@angular/router";
 @Component({
   selector: "app-menu",
   templateUrl: "./menu.component.html",
@@ -16,7 +15,7 @@ export class MenuComponent implements OnInit {
 
   search = "";
 
-  constructor(private com: SearchCommunicatorService) {}
+  constructor(private com: SearchCommunicatorService, private router: Router) {}
 
   ngOnInit() {}
 
@@ -30,10 +29,29 @@ export class MenuComponent implements OnInit {
     this.reset();
     this.menu[value].nativeElement.classList.add("active");
     console.log(this.search);
+    this.navigate(value);
+  }
+
+  navigate(value: number) {
+    switch (value) {
+      case 0:
+        this.router.navigate([""]);
+        break;
+      case 1:
+        this.router.navigate(["search"]);
+        break;
+      case 2:
+        this.router.navigate(["history"]);
+        break;
+      default:
+        this.router.navigate([""]);
+        break;
+    }
   }
 
   log() {
     console.log(this.search);
+    this.navigate(1);
     this.com.query(this.search);
   }
 
