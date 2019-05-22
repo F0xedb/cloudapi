@@ -19,7 +19,9 @@ export class PaginationComponent implements OnInit {
   @Output() callback = new EventEmitter<number>();
   pages = [];
 
-  constructor() {}
+  constructor() {
+    console.log("Creating pagination");
+  }
 
   ngOnInit() {
     console.log(this.size, this.start);
@@ -31,6 +33,7 @@ export class PaginationComponent implements OnInit {
   }
 
   updatePages(start) {
+    console.log("Updating pagination: " + start);
     this.pages = [];
     for (let i = 0; i < this.size; i++) {
       this.pages.push(i + start);
@@ -38,16 +41,19 @@ export class PaginationComponent implements OnInit {
   }
 
   goto(pagenum) {
+    console.log("Going to page number " + pagenum);
     this.callback.emit(pagenum);
   }
 
   next() {
     this.callback.emit(this.start + 1);
+    console.log("Going to page number: " + this.start + 1);
   }
 
   previous() {
     if (this.start != 0) {
       this.callback.emit(this.start - 1);
+      console.log("Going to page number: " + (this.start - 1));
     }
   }
 }
