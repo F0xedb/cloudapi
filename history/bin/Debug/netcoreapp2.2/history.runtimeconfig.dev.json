@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "/home/zeus/.dotnet/store/|arch|/|tfm|",
+      "/home/zeus/.nuget/packages"
+    ]
+  }
+}

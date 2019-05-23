@@ -1,0 +1,14 @@
+/home/zeus/Projects/school/reddit/history/bin/Debug/netcoreapp2.2/history.deps.json
+/home/zeus/Projects/school/reddit/history/bin/Debug/netcoreapp2.2/history.runtimeconfig.json
+/home/zeus/Projects/school/reddit/history/bin/Debug/netcoreapp2.2/history.runtimeconfig.dev.json
+/home/zeus/Projects/school/reddit/history/bin/Debug/netcoreapp2.2/history.dll
+/home/zeus/Projects/school/reddit/history/bin/Debug/netcoreapp2.2/history.pdb
+/home/zeus/Projects/school/reddit/history/obj/Debug/netcoreapp2.2/history.csprojAssemblyReference.cache
+/home/zeus/Projects/school/reddit/history/obj/Debug/netcoreapp2.2/history.csproj.CoreCompileInputs.cache
+/home/zeus/Projects/school/reddit/history/obj/Debug/netcoreapp2.2/history.RazorAssemblyInfo.cache
+/home/zeus/Projects/school/reddit/history/obj/Debug/netcoreapp2.2/history.RazorAssemblyInfo.cs
+/home/zeus/Projects/school/reddit/history/obj/Debug/netcoreapp2.2/history.AssemblyInfoInputs.cache
+/home/zeus/Projects/school/reddit/history/obj/Debug/netcoreapp2.2/history.AssemblyInfo.cs
+/home/zeus/Projects/school/reddit/history/obj/Debug/netcoreapp2.2/history.RazorTargetAssemblyInfo.cache
+/home/zeus/Projects/school/reddit/history/obj/Debug/netcoreapp2.2/history.dll
+/home/zeus/Projects/school/reddit/history/obj/Debug/netcoreapp2.2/history.pdb
