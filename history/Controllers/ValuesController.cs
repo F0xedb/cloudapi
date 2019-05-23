@@ -53,12 +53,22 @@ namespace history.Controllers
 
         // POST: api/Todo
         [HttpPost]
-        public async Task<ActionResult<historymodel>> PostTodoItem(historymodel item)
+        public async Task<ActionResult<historymodel>> PostHistoryItem(historymodel item)
         {
             _context.HistoryItems.Add(item);
             await _context.SaveChangesAsync();
 
             return CreatedAtAction(nameof(GetHistoryItem), new { id = item.id }, item);
+        }
+
+        [HttpDelete("{id}")]
+        public async Task<ActionResult<historymodel>> DeleteHistoryItem(long id)
+        {
+            var history = _context.HistoryItems.Find(id);
+            _context.HistoryItems.Remove(history);
+            await _context.SaveChangesAsync();
+
+            return history;
         }
     }
 }
