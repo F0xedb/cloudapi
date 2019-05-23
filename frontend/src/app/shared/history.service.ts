@@ -12,4 +12,10 @@ export class HistoryService {
   get(): Observable<any> {
     return this.http.get(environment.BACKEND + environment.BACKEND_HISTORY);
   }
+
+  delete(id) {
+    this.http
+      .delete(environment.BACKEND + environment.BACKEND_HISTORY + "/" + id)
+      .subscribe();
+  }
 }

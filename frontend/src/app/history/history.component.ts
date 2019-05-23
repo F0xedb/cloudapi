@@ -16,4 +16,13 @@ export class HistoryComponent implements OnInit {
   }
 
   ngOnInit() {}
+
+  open(history) {
+    window.open(history.url);
+  }
+
+  delete(history) {
+    console.log("Deleting item" + history.id);
+    this.history.delete(history.id);
+  }
 }
