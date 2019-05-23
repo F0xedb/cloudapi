@@ -2,7 +2,7 @@
   <br>
   <h2 class="ui center aligned icon header">
     <i class="circular search icon"></i>
-    {{data.queries.request[0].title}}
+    {{data.queries.request[0].searchTerms}}
   </h2>
   <h2 class="ui center aligned sub header">
     Total results : {{data.queries.request[0].totalResults}} in {{data.searchInformation.formattedSearchTime}} seconds
@@ -24,7 +24,7 @@
       </div>
       <div class="extra content">
         <div class="ui two buttons">
-          <a class="medium ui button" href="{{item.link}}">
+          <a class="medium ui button" (click)="open(item)">
             {{item.displayLink}}
           </a>
         </div>

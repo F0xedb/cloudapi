@@ -3,6 +3,8 @@ import { SearchService } from "../shared/search.service";
 import { query } from "@angular/core/src/render3";
 import { SearchCommunicatorService } from "../shared/search-communicator.service";
 import { PaginationComponent } from "../pagination/pagination.component";
+import { HistoryService } from "../shared/history.service";
+import { browser } from "protractor";
 
 @Component({
   selector: "app-list",
@@ -17,7 +19,8 @@ export class ListComponent implements OnInit {
 
   constructor(
     private google: SearchService,
-    private com: SearchCommunicatorService
+    private com: SearchCommunicatorService,
+    private history: HistoryService
   ) {
     com.callback.subscribe(x => {
       this.search(x);
@@ -47,5 +50,10 @@ export class ListComponent implements OnInit {
 
     this.startpage = page;
     this.callback.emit(page);
+  }
+
+  open(item) {
+    this.history.post(item.title, item.link);
+    window.open(item.link);
   }
 }

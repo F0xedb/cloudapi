@@ -18,4 +18,13 @@ export class HistoryService {
       .delete(environment.BACKEND + environment.BACKEND_HISTORY + "/" + id)
       .subscribe();
   }
+
+  post(name, url) {
+    this.http
+      .post(environment.BACKEND + environment.BACKEND_HISTORY, {
+        name: name,
+        url: url
+      })
+      .subscribe();
+  }
 }

@@ -1,3 +1,48 @@
-<p>
-  home works!
-</p>
+<div class="ui stackable grid container">
+  <div class="ui hidden section divider"></div>
+  <div class="ui hidden section divider"></div>
+  <div class="row">
+    <div class="ui center aligned container">
+      <h1 class="ui huge header">Cloud API search!</h1>
+      <p>
+        This project implements the google search api.
+        This API filters searches to social media only.
+        It has different features like searching, pagination, login system and search history.
+      </p>
+      <a class="ui green massive button" href='https://developers.google.com/custom-search/'>Google
+        search API
+      </a>
+    </div>
+  </div>
+  <div class="ui hidden section divider"></div>
+  <div class="ui hidden section divider"></div>
+  <div class="two column row">
+    <div class="column">
+      <h1 class="ui huge header">Searching</h1>
+      <p>
+        This search API filters to a default set of websites mainly.
+        youtube, reddit, facebook, twitter, 9gag, instagram, imgur, pintrest.
+        If you wish to change this then you need to rebuild the frontend.
+        Edit the environments file and update CX and API_KEY to the correct values.
+      </p>
+      <div class="ui small primary button" [routerLink]="[ '/search' ]">View details &raquo;
+      </div>
+    </div>
+    <div class="column">
+      <h1 class="ui header">History</h1>
+      <p>
+        Every search you make will be saved inside a database under your user credentials.
+        The history can be retrieved by going to the history tab.
+        There you can search your history, delete entries and much more.
+      </p>
+      <div class="ui small primary button" [routerLink]="[ '/history' ]">View details &raquo;</div>
+    </div>
+  </div>
+  <div class="ui hidden section divider"></div>
+  <div class="row">
+    <div class="column">
+      <div class="ui divider"></div>
+      <footer>&copy; 2019 Cloud API's Project - Tom Meyers.</footer>
+    </div>
+  </div>
+</div>

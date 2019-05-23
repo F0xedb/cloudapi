@@ -8,8 +8,11 @@
   </div>
   <div class="item" *ngFor="let history of list">
     <div class="right floated content">
-      <button class="negative ui button" (click)="delete(history)">
-        Delete
+      <button class="negative ui animated button" (click)="delete(history)">
+        <div class="visible content">Delete</div>
+        <div class="hidden content">
+          <i class="trash icon"></i>
+        </div>
       </button>
       <div class="ui animated button" (click)="open(history)" tabindex="0">
         <div class="visible content">Search</div>
