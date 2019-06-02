@@ -1,0 +1,20 @@
+  <div *ngIf="item != undefined" class="margin-top">
+    <div class="ui black card grid container">
+      <div class="ui input field margin-top">
+        <label>Name:</label>
+        <br>
+        <input type="text" placeholder="Name..." [(ngModel)]="item.name">
+      </div>
+      <div class="ui input field margin-top-bottom">
+        <label> url:</label>
+        <br>
+        <input type="text" placeholder="url..." [(ngModel)]="item.url">
+      </div>
+      <button class="ui primary button" (click)='put()'>
+        Save
+      </button>
+      <button class="ui button" (click)='reset()'>
+        Discard
+      </button>
+    </div>
+  </div>
