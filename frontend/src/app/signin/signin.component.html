@@ -1,0 +1,5 @@
+<div class="ui input grid container margin-top">
+  <google-signin [clientId]="myClientId" (googleSignInSuccess)="succes($event)" (googleSignInFailure)="fail()"
+    [width]="500" [theme]="dark" [scope]="myScope" [width]="1000">
+  </google-signin>
+</div>
