@@ -10,6 +10,10 @@
   </a>
   <div class="right menu">
     <div class="item">
+      {{name}}
+      <img src="{{url}}" alt="">
+    </div>
+    <div class="item">
       <div class="ui transparent icon input">
         <input type="text" [(ngModel)]="search" (keyup.enter)="log();" placeholder="Search...">
         <i class="search link icon" (click)="log();"></i>

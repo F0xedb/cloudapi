@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild, AfterViewInit } from "@angular/core";
 import { SearchCommunicatorService } from "../shared/search-communicator.service";
 import { Router } from "@angular/router";
+import { LoginService } from "../shared/login.service";
 @Component({
   selector: "app-menu",
   templateUrl: "./menu.component.html",
@@ -15,7 +16,27 @@ export class MenuComponent implements OnInit {
 
   search = "";
 
-  constructor(private com: SearchCommunicatorService, private router: Router) {}
+  name = "Unknown";
+  url = "";
+
+  constructor(
+    private com: SearchCommunicatorService,
+    private sign: LoginService,
+    private router: Router
+  ) {
+    this.sign.subject.subscribe(x => {
+      this.name = x.name;
+      this.url = x.image;
+      console.log(`${x.name}`);
+    });
+  }
+
+  callback(name, url) {
+    this.name = name;
+    this.url = url;
+    console.log(`Updating user ${name} ${url}`);
+    console.log(`Updating user ${this.name} ${this.url}`);
+  }
 
   ngOnInit() {}
 
@@ -35,7 +56,7 @@ export class MenuComponent implements OnInit {
   navigate(value: number) {
     switch (value) {
       case 0:
-        this.router.navigate([""]);
+        this.router.navigate(["home"]);
         break;
       case 1:
         this.router.navigate(["search"]);

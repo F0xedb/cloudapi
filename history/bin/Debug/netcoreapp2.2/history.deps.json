@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.2",
-    "signature": "4f20e51eacf154cf61d63f56cf8fb20e4da20b09"
+    "signature": "eadc8b3bcc21eb04778735139d057a8ad677efb7"
   },
   "compilationOptions": {
     "defines": [
@@ -24,6 +24,7 @@
     ".NETCoreApp,Version=v2.2": {
       "history/1.0.0": {
         "dependencies": {
+          "Google.Apis.Auth.Mvc": "1.40.0",
           "Microsoft.AspNetCore.App": "2.2.3",
           "Microsoft.AspNetCore.Razor.Design": "2.2.0",
           "Microsoft.NETCore.App": "2.2.0"
@@ -33,6 +34,17 @@
         },
         "compile": {
           "history.dll": {}
+        }
+      },
+      "Google.Apis.Auth.Mvc/1.40.0": {
+        "runtime": {
+          "lib/net45/Google.Apis.Auth.Mvc.dll": {
+            "assemblyVersion": "1.40.0.0",
+            "fileVersion": "1.40.0.0"
+          }
+        },
+        "compile": {
+          "lib/net45/Google.Apis.Auth.Mvc.dll": {}
         }
       },
       "Microsoft.AspNet.WebApi.Client/5.2.6": {
@@ -4242,6 +4254,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "Google.Apis.Auth.Mvc/1.40.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-94ONgxg+f/cxUYxUa+PZQOa58vSeA9yyNhm7BcbugVtc/B+Exlw1BUhMfwUkDkZ+A5OMuHGXIiYmeADFMBro3g==",
+      "path": "google.apis.auth.mvc/1.40.0",
+      "hashPath": "google.apis.auth.mvc.1.40.0.nupkg.sha512"
     },
     "Microsoft.AspNet.WebApi.Client/5.2.6": {
       "type": "package",

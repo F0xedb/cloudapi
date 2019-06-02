@@ -1,4 +1,10 @@
 <br />
+<div class="ui input grid container margin-top">
+  <label> Filter:</label>
+  <br>
+  <input type="text" placeholder="name..." [(ngModel)]="name" (change)="update()">
+</div>
+<br>
 <div class="ui black card grid container">
   <div class="content">
     <h1 class="header">History</h1>
@@ -14,6 +20,12 @@
           <i class="trash icon"></i>
         </div>
       </button>
+      <div class="ui animated primary button" (click)="edit(history)" tabindex="0">
+        <div class="visible content">Edit</div>
+        <div class="hidden content">
+          <i class="edit icon"></i>
+        </div>
+      </div>
       <div class="ui animated button" (click)="open(history)" tabindex="0">
         <div class="visible content">Search</div>
         <div class="hidden content">
@@ -30,4 +42,8 @@
     <br />
     <div class="ui divider"></div>
   </div>
+</div>
+
+<div class="ui one column stackable center aligned page grid">
+  <app-pagination [start]="startpage" [size]=5 (callback)="searcher($event)" [update]="callback"></app-pagination>
 </div>

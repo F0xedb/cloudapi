@@ -1,10 +1,7 @@
 import { Component, OnInit, EventEmitter } from "@angular/core";
 import { SearchService } from "../shared/search.service";
-import { query } from "@angular/core/src/render3";
 import { SearchCommunicatorService } from "../shared/search-communicator.service";
-import { PaginationComponent } from "../pagination/pagination.component";
 import { HistoryService } from "../shared/history.service";
-import { browser } from "protractor";
 
 @Component({
   selector: "app-list",
