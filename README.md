@@ -99,3 +99,13 @@ ng build
 mv dist/* <static webserver> # static webserver is the filepath where your static webserver is serving its content
 ```
 
+### Deploy with docker-compose
+Make sure the ports 80 and 5000 are open and available
+
+```
+git clone https://github.com/F0xedb/cloudapi.git
+cd cloudapi
+docker-compose up --build
+```
+Now you have a working application
+
